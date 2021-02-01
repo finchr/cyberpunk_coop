@@ -1,0 +1,13 @@
+
+Parameters:
+  OrgId:
+    Type: String
+    Default: o-oO0
+
+Resources:
+  cloudtrail:
+    Type: AWS::CloudFormation::Stack
+    Properties:
+      TemplateURL: templates/cloudtrail.yaml
+      Parameters:
+        OrgId: !Ref OrgId
